@@ -1,0 +1,648 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*リキッドレイアウト*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+}
+
+.clearfix::after{
+	content: "";
+	clear:both;
+	display:block;
+}
+
+body{
+	font-family: fot-tsukuardgothic-std, 游ゴシック体, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	     font-size: 16px;
+    letter-spacing: .025em;
+    line-height: 2;
+    min-width: 320px;
+    overflow: hidden;
+    word-break: break-all;
+    position: relative;
+}
+
+.container{
+	color:#111;
+	width:100%;
+	padding-left:5%;
+	padding-right:5%;
+		font-family: fot-tsukuardgothic-std, 游ゴシック体, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.025em;
+    line-height: 2;
+}
+p.officelogo{
+	
+position:absolute;
+top:1%;
+right:5%;
+	closor:pointer;
+	
+z-index: 999;}
+
+div.keyword{
+	width: 25px;
+	font-size:2.5em;
+	 line-height: 1.2;
+	margin-left: 50%;
+	padding-top:3%;
+
+	animation: fadeout-anim 5s linear forwards;
+}
+
+@keyframes fadeout-anim {
+	100% {
+		opacity: 0;
+	}
+}
+
+/*3ページスライドコンテンツ*/
+div.bx-wrapper{
+
+	margin-top:10%;
+	filter:opacity(100%)
+}
+/*3ページスライドコンテンツここまで*/
+
+div.animate__animated_building_sketch{
+	margin-top:10%;
+	position:absolute;
+	top:0%;
+	left:5%;
+	right:auto;
+	z-index: 9999;
+	
+}
+div.animate__animated_building_sketch:hover{
+	
+}
+
+
+@keyframes poyopoyo {
+  0%, 40%, 60%, 80% {
+    transform: scale(1.0);
+  }
+  50%, 70% {
+    transform: scale(0.95);
+  }
+}
+main{
+	display:flex;
+	cursor:pointer;
+}
+div.main_building {
+	position:absolute;
+	top:4%;
+	right:9%;
+	left:auto;
+	z-index: 9998;}
+
+div.main_building th{
+	padding-right:3rem;
+}
+div.main_building th,
+div.main_building td{
+	cursor:pointer;
+}
+a:hover{
+	color:#F67F44;
+	text-decoration:underline;
+	background-color:#FAEEEF;
+	
+}
+a:visited{
+	color:burlywood;
+}
+a:link{
+	color:brown;
+}
+
+/*div.animate__animated_building_photo{
+	position:absolute;
+	top:15%;
+	left:auto;
+	z-index: 1;
+	filter:blur(5px);
+
+}*/
+/*ふわっと出るCSS*/
+.fadein01{
+
+	 opacity : 0;
+    transform: translate(0%,-50%);
+	transform:scale(.75,.75);
+    transition: all 5s;
+	transition-delay:4s;
+	   position: absolute;
+	z-index: 10;
+
+
+}
+/*ふわっと出るCSS*/
+.fadein02{
+
+	 opacity : 0.2;
+    transform: translate(0%,-50%);
+	transform:scale(.75,.75);
+    transition: all 5s;
+	transition-delay:10s;
+	   position: absolute;
+    left:70%;
+	top:10%;
+	z-index: 10;
+}
+
+/*フェードアウト*/
+.image{
+	width: 100%;
+	animation: fadeout-anim 15s linear forwards;
+}
+
+@keyframes fadeout-anim {
+	100% {
+		opacity: 0;
+	}
+}
+/*フェードアウトここまで*/
+
+/*フェードイン*/
+.image{
+	width: 100%;
+	opacity: 0;
+	animation: fadein-anim 15s linear forwards;
+}
+
+@keyframes fadein-anim {
+	100% {
+		opacity: 1;
+	}
+}
+/*フェードインここまで*/
+
+/*お知らせここから*/
+.tab-box2{
+	margin-bottom: 30px;
+}
+.tab-box2 .tab{
+	list-style-type: none;
+	display: flex;
+}
+.tab-box2 .tab li{
+	padding: 15px 10px;
+	width: 25%;
+	border-bottom:1px solid #e6e6e6;
+	text-align: center;
+}
+.tab-box2 .tab li.active{
+	border-bottom:4px solid #666;
+}
+.tab-box2 .tab li:not(.active):hover{
+	cursor: pointer;
+	background-color: #f5f5f5;
+}
+.tab-box2 .content{
+	height: 240px;
+	overflow-y: scroll;
+}
+.tab-box2 .content{
+	list-style-type: none;
+}
+.tab-box2 .content li a{
+	display: flex;
+	/*align-items: flex-start;*/
+	align-items: baseline;
+	padding:16px 0;
+	color: #333;
+	text-decoration: none;
+	border-bottom:1px dotted #999;
+}
+.tab-box2 .content li a:hover{
+	opacity: .75;
+}
+.tab-box2 .content time{
+	width: 8em;
+}
+.tab-box2 .content .cat{
+	width: 8em;
+	background-color: #EAB682;
+	color: #fff;
+	font-size: 80%;
+	text-align: center;
+	padding: 5px;
+}
+.tab-box2 .content .cat1{ background-color:#BBDBE8; }
+.tab-box2 .content .cat2{ background-color:#EDE360; }
+.tab-box2 .content .cat3{ background-color:#EEAEC8;  }
+.tab-box2 .content .ttl{
+	margin-left: 2em;
+	width: calc(100% - 18em);
+}
+/*お知らせここまで*/
+
+/*ナビゲーション*/
+.nav{
+	width:1200px;
+	list-style:none;
+	font-size: 1rem;
+	max-width: 100%;
+	height:auto;
+	closor:pointer;
+}
+.nav li{
+	float:left;
+	position:relative;
+}
+.nav li::after{
+	content:"";
+	position:absolute;
+	top:50%;
+	right:0;
+	transform:translateY(-50%);
+	width:1px;
+	height:30%;
+	background-color:#FFF;
+	
+}
+.nav li:last-of-type::after{
+	display:none;
+}
+.nav li a{
+	position:relative;
+	display:block;
+	width:200px;
+	padding:20px;
+	text-decoration:none;
+	color:#111;
+	background-color:#FFF;
+	text-align:center;
+}
+.nav li a:hover{
+	background-color:#FAEEEF;
+}
+
+
+.nav li a::after{
+	content:"";
+	width:0;
+    transition: .5s all;
+}
+.nav li a:hover::after{
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:50%;
+	transform:translateX(-50%);
+	width:100%;
+	height:5px;
+	background-color:#aaa;
+}
+/*ナビゲーション終わり*/
+
+/*flexbox*/
+.item {
+  width: 100%;
+	text-align: center;
+}
+.item-img {
+  padding: auto;
+}
+.item-body {
+  padding: 0;
+	 letter-spacing: 0em;
+}
+
+.item-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #AE7D53;
+}
+.item-title:visited {
+  color: #666;
+}
+
+.item-body p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+.items {
+  display: flex;
+  justify-content: space-around;
+	margin-top: 10%;
+}
+.items .item {
+  width: 30%;
+	  transition-duration: .3s;
+}
+.items.item:hover{
+	top:0;
+	  transition-duration: .3s;
+  transform: scale(1.2);
+  opacity: .6;
+}
+/*flexbox終わり*/
+
+.infomation{
+	margin: 10%;
+}
+item{
+  background: #000;
+  overflow: hidden;
+}
+item-img{
+	transition-duration: 0.3s;
+}
+item-img:hover{
+	transform: scale(1.2);
+  transition-duration: 0.3s;
+}
+
+/*footerここから*/
+footer {
+	background-color:#FFF;
+		width:auto;
+	height:300px;
+    position: relative;
+	margin-top: 20%;	
+}
+ul.about_contact{
+	display: flex;
+	justify-content: center;
+}
+li.about_contact{
+	margin: 1%;
+}
+
+
+/*.anim-box {
+  background: linear-gradient(to right, #362ae0 0%,#3b79cc 50%,#42d3ed 100%);
+  border-radius: 5px;
+  max-width: 400px;
+  height: 250px;
+}*/
+
+.fuwafuwa {
+  animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
+  background: url(../img/ico-apple.svg) no-repeat center center / 60px auto;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+}
+ 
+@keyframes fuwafuwa {
+  0% {
+    transform:translate(0, 0) rotate(-7deg);
+  }
+  50% {
+    transform:translate(0, -7px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(7deg);
+  }
+}
+ 
+
+#social-navigation{
+text-align: center;
+}
+.address{
+	display: flex;
+ 	position: absolute;
+	right: 18%;
+	top:5%;
+	font-size:90%;
+	line-height:1.5;
+	color:#4B4949;
+	font-family: fot-tsukuardgothic-std, 游ゴシック体, "Yu Gothic", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+.footerbox{
+position: absolute;
+left: 20%;
+	top:0%;
+}
+footer #link a:hover{
+	background-color:aquamarine;
+}
+
+p.copyrights {
+	font-size:5px;
+	color:gray;
+    width:auto;
+	height:auto;
+	margin-top: 5%;
+	margin-bottom: 10px;
+	text-align: center;
+	border-top: thin solid gray;
+}
+p.officelogo1{
+	
+top:10%;
+text-align: center;
+	closor:pointer;
+}
+
+/*コンタクトページ*/
+
+#contact h1{
+	margin-top: 10%;
+}
+#contact .access table{
+    float:left;
+
+}
+#contact .access th,
+#contact .access td{
+    text-align:left;
+    vertical-align:top;
+    line-height:3.5;
+}
+#contact .access td{
+    padding-left:30px;
+}
+#contact .access iframe{
+    width:100%;
+    float:left;
+    padding-top: 5%;
+}
+#contact .form{
+    background-color: #eaeaea;
+    padding: 30px 50px;
+}
+#contact .form dl dt{
+    width:250px;
+    padding: 10px 5%;
+    float:left;
+    clear:both;
+}
+#contact section{
+	 padding:10%;
+}
+#contact .form dl dd{
+    padding:10px 0 ;
+}
+
+h2.icon{
+    clear: both;
+}
+#contact .form .name{
+    width:240px;
+    height: 30px;
+}
+#contact .form .email{
+    width:300px;
+    height: 30px;
+}
+#contact .form .tel{
+    width:240px;
+    height: 30px;
+}
+#contact .form .type{
+    width:180px;
+    height: 30px;
+}
+#contact .form .message{
+    width:660px;
+    height: 150px;
+}
+
+#contact .form button{
+    background-color: burlywood;
+    color: #fff;
+    font-size: 20px;
+   
+    width:120px;
+    display:block;
+    text-align: center;
+    line-height: 50px;
+  
+    border-radius: 5px;
+    border: 3px solid #e1e9ec;
+    margin-left:24%;
+}
+#contact .form button:hover{
+    background-color:bisque;
+    color:floralwhite;
+    cursor:pointer;
+}
+#contact .form .required:after{
+    content:"*";
+    color:#F00;
+}
+#contact .form .attention{
+    margin:20px 0 0 24%;
+}
+#contact footer{
+	background-color: #FFF;
+    width: auto;
+    position: relative;
+    margin-top: 10%;
+}
+/*コンタクトページここまで*/
+
+/*アバウトページここから*/
+#about .main-center{
+	text-align: center;
+	width:auto;
+
+}
+#about .main-center p{
+	margin-top: 10%;
+}
+	
+section.profile{
+	text-align: left;
+	width: 75%;
+	padding-left: 25%;
+		margin-top: 3%;
+}
+/*アバウトページここまで*/
+
+
+@media screen and (max-width:1024px){
+	/*画面サイズが600px以下の場合に適用*/
+
+	img.fadein01{
+		width: 500px;
+	}
+	div.main_building {
+		font-size: 0.8rem;
+		    position: absolute;
+    top: 5.7%;
+    right: 9%;
+    left: auto;
+    z-index: 9998;
+	}
+	p.officelogo {
+    position: absolute;
+    top: 4%;
+    right: 5%;
+    closor: pointer;
+    z-index: 999;
+	}
+	p.copyrights {
+    font-size: 5px;
+    color: gray;
+    width: auto;
+    height: auto;
+    margin-top: 7%;
+    text-align: center;
+    border-top: thin solid gray;
+}
+
+}
+
+
+	
+@media screen and (max-width:600px){
+	/*画面サイズが600px以下の場合に適用*/
+	
+		.items {
+		flex-direction: column;
+	}
+	.items .item {
+		width: 100%;
+	}
+	.item{
+		flex-direction: column;
+	}	
+	img.fadein01{
+	
+		width: 300px;
+	}
+	div.animate__animated_building_sketch{
+	
+	position:absolute;
+	top:10%;
+	left:4%;
+	right:auto;
+	z-index: 9999;
+	
+}
+	div.main_building {
+		font-size: 0.8rem;
+		    position: absolute;
+    top: 20%;
+    right: 9%;
+    left: auto;
+    z-index: 9998;
+	}
+	p.officelogo {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    closor: pointer;
+    z-index: 999;
+	}
+	
+}
+

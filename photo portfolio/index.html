@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title> TOP|自由気ままな写真家「Imanari Kanako」Official Website </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body id="index">
+
+  　<!--header始まり-->
+　　<header>
+
+  <!-- top -->
+<div class="top">
+  <div id="movei-contents">
+    <video id="video" src="images/Mountains.mp4" loop autoplay muted></video>
+		<p>動画を再生するにはvideoタグをサポートしたブラウザが必要です。</p>
+	</video>
+</div>
+</div>
+
+
+  
+    <script>
+    jQuery(function($){
+      var winH = $(window).height();
+      //全画面表示の場所を指定する
+      $('#movei-contents').outerHeight(winH);
+   
+      $(window).on('load',function(){
+          //画像、動画のクラスを決める
+          setBgImg($('.fitsize'));
+      });
+   
+      $(window).on('resize',function(){
+          //リサイズ指定
+          winH = $(window).height();
+          $('.fit').outerHeight(winH);
+           
+          setBgImg($('.fitsize'));
+      });
+   
+      function setBgImg(object){
+          //画像サイズ取得
+          var imgW = object.width();
+          var imgH = object.height();
+           
+          //ウィンドウサイズ取得
+          var winW = $(window).width();
+          var winH = $(window).height();  
+   
+          //幅・高さの拡大・縮小率取得
+          var scaleW = winW / imgW;
+          var scaleH = winH / imgH;
+   
+          //幅・高さの拡大・縮小率の大きいものを取得
+          var fixScale = Math.max(scaleW, scaleH);
+   
+          //画像の幅高さを設定
+          var setW = imgW * fixScale;
+          var setH = imgH * fixScale;
+   
+          //画像の位置を設定
+          var moveX = Math.floor((winW - setW) / 2);
+          var moveY = Math.floor((winH - setH) / 2);
+   
+          //設定した数値でスタイルを適用
+          object.css({
+              'width': setW,
+              'height': setH,
+              'left' : moveX,
+              'top' : moveY
+          });
+      }
+  });
+  </script>
+  
+  
+　　　　<div class="logo">
+  　　　　　<a href="index.html"> <img src="images/Imanari_Kanako.svg" alt="IMANARI Kanako" width="500"></a>
+　　　　</div></div>
+　　　　<nav>
+    　　　<ul class="global-nav">
+    　　　　　　<li><a href="portfolio.html">Portfolio</a></li>
+    　　　　　　<li><a href="about.html">About</a></li>
+    　　　　　　<li><a href="contact.html">Contact</a></li>
+　　　　　　</ul>
+　　　　</nav>
+　　</header>
+   <!--header終わり-->
+   <!--wrap始まり-->
+　　<div id="wrap">
+   　　<div class="content">
+     <h1>Photo is my life.
+       <br>Everyday is Special!</h1>
+     <p>このWebサイトは、ポートフォリオ用に作成した「Liberta〜自由に〜」というコンセプトのオリジナル
+       サイトです。<br>学習した基本のHTML、CSS、jQueryで制作しています。</p>
+
+       <p class="btn"><a href="portfolio.html">My Portfolio</a></p>
+     
+    　　</div>
+　　</div>
+　　<!--wrap終わり-->
+  <!--footer始まり-->
+　　<footer>
+　　　　<small>(c)2021 Imanari-studio</small>
+　　</footer>
+<!--footer終わり-->
+
+</body>
+</html>
+
